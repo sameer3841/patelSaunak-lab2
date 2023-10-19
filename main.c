@@ -1,3 +1,9 @@
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <lab2.h>
+
 // TODO: add the appropriate head files here
 
 /************************************************************\
