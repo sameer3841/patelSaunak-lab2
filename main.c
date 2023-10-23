@@ -2,7 +2,7 @@
 #include <sys/time.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <lab2.h>
+#include "lab2.h"
 
 // TODO: add the appropriate head files here
 
@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     
     // TODO: call ipc_create to create shared memory region to which parent
     //       child have access.
-
+    ipc_ptr = ipc_create(sizeof(start_time));
     /* fork a child process */
     pid = fork();
 
