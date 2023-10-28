@@ -18,16 +18,16 @@
  ***************************************************************/
 char* ipc_create(int size){
     /* shared memory file descriptor */
-    int lab2;
+    int fd;
     /* pointer to shared memory obect */
     char* ptr;
 
     // TODO: create the shared memory object called lab2
-        lab2 = shm_open(ptr,O_CREAT | O_RDWR,0666);
+        fd = shm_open("lab2",O_CREAT | O_RDWR,0666);
     // TODO: configure the size of the shared memory object 
-        ftruncate(lab2,size);
+        ftruncate(fd,size);
     // TODO: memory map the shared memory object */
-        ptr = mmap(0,size,PROT_WRITE,MAP_SHARED,lab2,0);
+        ptr = mmap(0,size,PROT_WRITE,MAP_SHARED,fd,0);
 
     return ptr;
 }

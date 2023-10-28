@@ -65,8 +65,7 @@ int main(int argc, char** argv)
         // execute execvp()
         command_args = get_arguments(argc,argv);
         execvp(command_args[0],command_args);
-    }
-    else { /* parent process */
+    } else { /* parent process */
         // TODO: have parent wait and get status of child.
         //       Use the variable status to store status of child. 
         wait(&status);
