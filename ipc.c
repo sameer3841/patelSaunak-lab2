@@ -27,7 +27,7 @@ char* ipc_create(int size){
     // TODO: configure the size of the shared memory object 
         ftruncate(fd,size);
     // TODO: memory map the shared memory object */
-        ptr = mmap(0,size,PROT_WRITE,MAP_SHARED,fd,0);
+        ptr = mmap(0,size,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
 
     return ptr;
 }
