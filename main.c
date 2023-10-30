@@ -16,6 +16,7 @@
  * For example:  ./time ls -l
  * will return an array consisting of {"ls","-l", NULL}
  ************************************************************/
+
 char** get_arguments(int argc, char** argv){
     int arg_length = argc;
     char**  cmd_args = NULL;
